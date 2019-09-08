@@ -1,0 +1,28 @@
+{% load crispy_forms_tags %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="content-section" >
+		<form method="POST" >
+			{% csrf_token %}
+
+				{{ form|crispy }}
+				<div class="form-group">
+
+			<button class="btn btn-outline-info"  type="submit"> sign in </button>
+		</div>
+		</form>
+
+		already logged in <a href="{% url "login" %}"> login </a>
+
+
+
+	</div>
+
+</body>
+</html>

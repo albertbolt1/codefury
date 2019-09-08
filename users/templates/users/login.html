@@ -1,0 +1,24 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="content-section">
+<form method="POST" >
+	{% csrf_token %}
+	<table>
+		{{ form|crispy}}
+	</table>
+	<button type="submit"> login </button>
+</form>
+<div class="border-top pt-3">
+            <small class="text-muted">
+                Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
+            </small>
+        </div>
+
+	</div>
+</body>
+</html>
